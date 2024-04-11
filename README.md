@@ -5,7 +5,7 @@
 ## Content
 ### Arrays & Hashing
 - [217. Contains Duplicate](Arrays&Hashing/217.%20Contains%20Duplicate)
-- [242. Valid Anagram](Arrays&Hashing/242.%20Valid%20Anagram)
+- [242. Valid Anagram](Arrays&Hashing/242.%20Valid%20Anagram): Using Alphabet count array to check 2 Strings are anagram
 - [1. Two Sum](Arrays&Hashing/1.%20Two%20Sum): Using set to check duplicate
 
 ### Sliding Window
