@@ -1,31 +1,35 @@
 # [1. Two Sum](https://leetcode.com/problems/two-sum/)
 
 ## Solution
-- Use `Set` to check duplicate.
+- Map contains element as a key and index as a value.
+- For loop chooses the 1st operand
+- If statement checks if the 2nd operand is in the map
 
 ### Java
 ```java
+// A(1st operand) + B(2nd operand) = target
 class Solution {
-    public boolean containsDuplicate(int[] nums) {
-        // Set
-        Set<Integer> set = new HashSet<>();
+    public int[] twoSum(int[] nums, int target) {
 
-        // Index
-        int i = 0;
+        // Map which connects element to index of input array
+        Map<Integer, Integer> elementToIndex = new HashMap<>();
 
-        // While loop
-        while (i < nums.length) {
-            // Check if the set contains the value
-            if (set.contains(nums[i])) {
-                return true;
+        // for loop chooses the 1st operand
+        for (int i = 0; i < nums.length; i++) {
+            // check if the map contains the 2nd operand
+            int remainingValue = target - nums[i];
+            if (elementToIndex.containsKey(remainingValue)) {
+                int[] result = new int[2];
+                result[0] = elementToIndex.get(remainingValue);
+                result[1] = i;
+                return result;
             }
-            // add new value to the set
-            set.add(nums[i]);
-            // increment index
-            i++;
+            // add new pair to the map, whose
+            // key: element
+            // value: index
+            elementToIndex.put(nums[i], i);
         }
-        // If the input didn't contain duplicate value
-        return false;
+        return null;
     }
 }
 ```
