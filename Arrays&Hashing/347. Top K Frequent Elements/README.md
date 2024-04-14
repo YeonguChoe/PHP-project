@@ -1,7 +1,9 @@
 # 347. Top K Frequent Elements
 
 ## Solution
-- 추가 설명 필요
+- Create a map whose key is number and value is frequency
+- Create MaxHeap based on value of the map using lambda function
+- Extract (poll) the topmost value from the MaxHeap *k* times
 
 ### Java
 ```java
@@ -18,9 +20,12 @@ class Solution {
             numberToFrequency.put(i, numberToFrequency.get(i) + 1);
         }
 
+        // Create a MaxHeap using comparator function
         Queue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+        // Add every entry of the map
         pq.addAll(numberToFrequency.entrySet());
 
+        // Extract the topmost entry k times
         int[] result = new int[k];
 
         for (int i = 0; i < k; i++) {
