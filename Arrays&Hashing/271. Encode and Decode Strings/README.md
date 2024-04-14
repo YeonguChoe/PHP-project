@@ -1,7 +1,8 @@
 # 271. Encode and Decode Strings
 
 ## Solution
-- 
+- Append word length and `#` in front of each words when making a decoded String.
+- 1st pointer at the start of next word search. 2nd pointer at the next `#`.
 
 ### Java
 ```java
