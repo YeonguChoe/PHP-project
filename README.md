@@ -1,5 +1,5 @@
 # Blind75
-- Algorithm interview preparation in Java
+- Algorithm interview preparation in Python
 
 ## Content
 ### Arrays & Hashing
