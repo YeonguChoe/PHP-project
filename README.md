@@ -1,5 +1,5 @@
 # Blind75
-- Algorithm interview preparation in JS/TS and Java.
+- Algorithm interview preparation in C#, JS/TS and Java.
 - JS/TS doesn't have built-in Heap, while Java has every data structure in collection.
 
 ## Content
